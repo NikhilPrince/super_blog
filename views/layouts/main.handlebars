@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSAS</title>
+  <link rel="stylesheet" href="\css\style.css">
+  <link rel="stylesheet" href="\css\jass.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around mx-auto">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a style="font-family: Impact, fantasy;" href="/">OSAS</a>
+      </h1>
+      <h2 style="font-family: Impact, fantasy;">
+        Welcome to One Stop Adopt Shop
+      </h2>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> 
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      <!--  <a href="About">About</a> -->
+      </nav>
+    </header>
+</section>
+    <main class="container">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    
+    <div class="hero-foot">
+    <div class="tabs is-centered">
+      <ul>
+        <li><a style="color:white;">Project 2 by: the OSAS</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

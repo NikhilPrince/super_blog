@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS osas_db;
+CREATE DATABASE osas_db;

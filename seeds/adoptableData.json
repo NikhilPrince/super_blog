@@ -1,0 +1,51 @@
+[
+    {
+        "name" : "Simon",
+        "animal_id" : 1,
+        "description" : "Playful Siamese Cat in need of a home.",
+        "age" : 3,
+        "adoption_Fee" : 50
+
+    },
+    {
+        "name" : "Buddy",
+        "animal_id" : 0,
+        "description" : "Calm Golden Retreiver Looking for someone to cuddle with!",
+        "age" : 5,
+        "adoption_Fee" : 50
+
+    },
+    {
+        "name" : "Buggs",
+        "animal_id" : 2,
+        "description" : "Senior Bunny looking for somewhere to settle down.",
+        "age" : 2,
+        "adoption_Fee" : 50
+
+    },
+    {
+        "name" : "Hammy",
+        "animal_id" : 3,
+        "description" : "Rambunctious Hamster Looking for a new running wheel. The last one broke!",
+        "age" : 1,
+        "adoption_Fee" : 50
+
+    },
+    {
+        "name" : "Terry",
+        "animal_id" : 4,
+        "description" : "Slow but steady turtle looking to retire from rabbit racing.",
+        "age" : 25,
+        "adoption_Fee" : 50
+
+    },
+    {
+        "name" : "Larry",
+        "animal_id" : 5,
+        "description" : "Larry the Lizard just be Lizarding.",
+        "age" : 6,
+        "adoption_Fee" : 50
+
+    }
+    
+]

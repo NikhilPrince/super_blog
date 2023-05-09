@@ -1,0 +1,53 @@
+<div style="margin-top:6cm" class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="col">
+  <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <h3>Adoptable Animals:</h3>
+    <form class="form new-adoption-form">
+      <div class="form-group">
+        <label for="adoptable-name">Animal Name:</label>
+        <input class="form-input" type="text" id="adoptable-name" name="adoptable-name" />
+      </div>
+      <div class="form-group">
+        <label for="adoptable-age">Animale Age:</label>
+        <input class="form-input" type="number" id="adoptable-age" name="adoptable-age" />
+      </div>
+      <div class="form-group">
+        <label for="adoptable-desc">Description:</label>
+        <textarea class="form-input" id="adoptable-desc" name="adoptable-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" style="margin-top:1cm;">Create</button>
+      </div>
+    </form>
+  </div>
+  <p>
+    <button style="margin-top:1cm" href="./homepage.handlebars" class="btn btn-primary">I'm Looking For a New Family
+      Member!</button>
+  </p>
+  <p>
+    <button style="margin-top:1cm" href="" class="btn btn-primary">I Want To Make a Donation!</button>
+  </p>
+
+  {{#if adoptable.length}}
+  <div class="col-md-6 adoptable-list">
+    <h3>Posted Animal:</h3>
+
+    {{#each adoptable as |adoptable|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/adoptable/{{adoptable.id}}">{{adoptable.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{adoptable.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+<script src="./js/profile.js"></script>

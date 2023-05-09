@@ -1,0 +1,20 @@
+[
+    {
+        "animal": "Dog"
+    },
+    {
+        "animal": "Cat"
+    },
+    {
+        "animal": "Bunny"
+    },
+    {
+        "animal": "Hamster"
+    },
+    {
+        "animal": "Turtle"
+    },
+    {
+        "animal":"Lizard"
+    }
+]

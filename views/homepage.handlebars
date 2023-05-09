@@ -1,0 +1,29 @@
+<!-- Loop over each object in the projects array -->
+ <section style="margin-top:11cm"class="About">
+    <h3 style="font-size:95px">Little about us</h3>
+    <p style="color:black;">A Website Dedicated to finding a home for any animal in need. Find a new family member, or post an animal for adoption at no fee! We believe that saving an animals life should cost nothing other than your time and effort. We are a non-profit organization and work strictly off of donations so please feel free to show some love and keep this website possible. You will find an option to donate either during the adoption process or by clicking <a style="text-decoration: underline">here</a>!</p>
+</section>
+  <p>
+    <button href="./post.handlebars" class="btn btn-primary">My Furry Friend Needs a Home!</button>
+  </p>
+{{#each adoptables as |adoptable| }}
+<div style="margin-top:2cm"class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a style="font-family: Impact, fantasy;"href="adoptable/{{adoptable.id}}">{{adoptable.name}}</a>
+    </h2>
+    <p style="color:white">
+      Click on pet for adoption information and more!
+    </p>
+    <p style="color:white">Posted for adoption on {{format_date adoptable.createdAt}}</p>
+    {{!-- {{format_date adoptable.date_created}} --}}
+  </div>
+  <div class="col-md-7">
+    <p style="color:white">
+      {{adoptable.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
